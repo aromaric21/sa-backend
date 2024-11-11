@@ -11,13 +11,15 @@ public class Client {
     private int id;
     @Column(unique = true)
     private String email;
+    private String telephone;
 
     public Client() {
     }
 
-    public Client(int id, String email) {
+    public Client(int id, String email, String telephone) {
         this.id = id;
         this.email = email;
+        this.telephone = telephone;
     }
 
     public int getId() {
@@ -34,5 +36,13 @@ public class Client {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 }
